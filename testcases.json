@@ -1,24 +1,60 @@
 [
-    {
-        "id": "TC-INV-003",
-        "description": "Verify that 'Add To Cart' button can add selected products to the cart",
-        "pre-conditions": [
-            "Application is installed.",
-            "User is already logged in."
-        ],
-        "test-steps": [
-            "Open the application.",
-            "Enter valid username in username field.",
-            "Enter valid password in password field.",
-            "Click on the 'Login' button.",
-            "Click add the prpduct to be selected in cart"
-        ],
-        "test-data": {
-            "username": "standard_user",
-            "password": "secret_sauce"
-        },
-        "expected-result": "Products is in the cart",
-        "priority": "High",
-        "isPositive": true
-    }
+  {
+    "id": "TC-LOGIN-001",
+    "description": "Verify that a user can log in with valid credentials.",
+    "pre-conditions": ["Application is installed.", "User in login screen."],
+    "test-steps": [
+      "Open the application.",
+      "Enter valid username in username field.",
+      "Enter valid password in password field.",
+      "Click on the 'Login' button."
+    ],
+    "test-data": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "expected-result": "User is successfully logged in and redirected to the dashboard.",
+    "priority": "High",
+    "isPositive": true
+  },
+  {
+    "id": "TC-LOGIN-002",
+    "description": "Verify that a user cannot log in with locked out credentials.",
+    "pre-conditions": ["Application is installed.", "User in login screen."],
+    "test-steps": [
+      "Open the application.",
+      "Enter locked out username in username field.",
+      "Enter valid password in password field.",
+      "Click on the 'Login' button."
+    ],
+    "test-data": {
+      "username": "locked_out_user",
+      "password": "secret_sauce"
+    },
+    "expected-result": "User sees an error message indicating the account is locked.",
+    "priority": "High",
+    "isPositive": false
+  },
+  {
+    "id": "TC-INV-003",
+    "description": "Verify that 'Add To Cart' button can add selected products to the cart",
+    "pre-conditions": [
+      "Application is installed.",
+      "User is already logged in."
+    ],
+    "test-steps": [
+      "Open the application.",
+      "Enter valid username in username field.",
+      "Enter valid password in password field.",
+      "Click on the 'Login' button.",
+      "Click add the prpduct to be selected in cart"
+    ],
+    "test-data": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "expected-result": "Products is in the cart and button converted to 'Remove'",
+    "priority": "High",
+    "isPositive": true
+  }
 ]
