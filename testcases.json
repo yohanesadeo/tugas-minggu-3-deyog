@@ -47,7 +47,7 @@
       "Enter valid username in username field.",
       "Enter valid password in password field.",
       "Click on the 'Login' button.",
-      "Click add the prpduct to be selected in cart"
+      "Click add the product to be selected in cart"
     ],
     "test-data": {
       "username": "standard_user",
