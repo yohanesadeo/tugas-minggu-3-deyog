@@ -1,0 +1,24 @@
+[
+    {
+        "id": "TC-INV-003",
+        "description": "Verify that 'Add To Cart' button can add selected products to the cart",
+        "pre-conditions": [
+            "Application is installed.",
+            "User is already logged in."
+        ],
+        "test-steps": [
+            "Open the application.",
+            "Enter valid username in username field.",
+            "Enter valid password in password field.",
+            "Click on the 'Login' button.",
+            "Click add the prpduct to be selected in cart"
+        ],
+        "test-data": {
+            "username": "standard_user",
+            "password": "secret_sauce"
+        },
+        "expected-result": "Products is in the cart",
+        "priority": "High",
+        "isPositive": true
+    }
+]
